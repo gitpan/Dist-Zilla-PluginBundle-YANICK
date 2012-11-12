@@ -3,7 +3,7 @@ BEGIN {
   $Dist::Zilla::PluginBundle::YANICK::AUTHORITY = 'cpan:YANICK';
 }
 {
-  $Dist::Zilla::PluginBundle::YANICK::VERSION = '0.12.0';
+  $Dist::Zilla::PluginBundle::YANICK::VERSION = '0.13.0';
 }
 
 # ABSTRACT: Be like Yanick when you build your dists
@@ -38,6 +38,7 @@ use Dist::Zilla::Plugin::ChangeStats::Git;
 use Dist::Zilla::Plugin::Test::UnusedVars;
 use Dist::Zilla::Plugin::RunExtraTests;
 use Dist::Zilla::Plugin::HelpWanted;
+use Dist::Zilla::Plugin::CoderwallEndorse;
 
 with 'Dist::Zilla::Role::PluginBundle::Easy';
 
@@ -64,6 +65,7 @@ sub configure {
           ReadmeFromPod 
           ReadmeMarkdownFromPod
           /,
+        [ CoderwallEndorse => { users => 'yanick:Yanick' } ],
         [ NextRelease => { 
                 time_zone => 'America/Montreal',
                 format    => '%-9v %{yyyy-MM-dd}d',
@@ -145,6 +147,7 @@ sub configure {
 1;
 
 __END__
+
 =pod
 
 =head1 NAME
@@ -153,7 +156,7 @@ Dist::Zilla::PluginBundle::YANICK - Be like Yanick when you build your dists
 
 =head1 VERSION
 
-version 0.12.0
+version 0.13.0
 
 =head1 DESCRIPTION
 
@@ -185,6 +188,9 @@ his distributions. It's roughly equivalent to
 
     [ReadmeFromPod]
     [ReadmeMarkdownFromPod]
+
+    [CoderwallEndorse]
+    users = yanick:Yanick
 
     [NextRelease]
     time_zone = America/Montreal
@@ -278,4 +284,3 @@ This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-

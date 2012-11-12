@@ -4,7 +4,7 @@ Dist::Zilla::PluginBundle::YANICK - Be like Yanick when you build your dists
 
 # VERSION
 
-version 0.12.0
+version 0.13.0
 
 # DESCRIPTION
 
@@ -36,6 +36,9 @@ his distributions. It's roughly equivalent to
 
     [ReadmeFromPod]
     [ReadmeMarkdownFromPod]
+
+    [CoderwallEndorse]
+    users = yanick:Yanick
 
     [NextRelease]
     time_zone = America/Montreal
@@ -92,7 +95,7 @@ his distributions. It's roughly equivalent to
 
 ## ARGUMENTS
 
-### autoprereqs_skip
+### autoprereqs\_skip
 
 Passed as `skip` to AutoPrereqs.
 
@@ -100,7 +103,7 @@ Passed as `skip` to AutoPrereqs.
 
 Passed to [Dist::Zilla::Plugin::Authority](http://search.cpan.org/perldoc?Dist::Zilla::Plugin::Authority).
 
-### fake_release
+### fake\_release
 
 If given a true value, uses [Dist::Zilla::Plugin::FakeRelease](http://search.cpan.org/perldoc?Dist::Zilla::Plugin::FakeRelease)
 instead of 
@@ -109,17 +112,17 @@ instead of
 [Dist::Zilla::Plugin::InstallRelease](http://search.cpan.org/perldoc?Dist::Zilla::Plugin::InstallRelease) and
 [Dist::Zilla::Plugin::Twitter](http://search.cpan.org/perldoc?Dist::Zilla::Plugin::Twitter).
 
-### mb_class
+### mb\_class
 
 Passed to `ModuleBuild` plugin.
 
-### include_dotfiles
+### include\_dotfiles
 
 For `GatherDir`. Defaults to false.
 
 # AUTHOR
 
-Yanick Champoux <yanick@babyl.dyndns.org>
+Yanick Champoux <yanick@babyl.dyndns.org> [![endorse](http://api.coderwall.com/yanick/endorsecount.png)](http://coderwall.com/yanick)
 
 # COPYRIGHT AND LICENSE
 

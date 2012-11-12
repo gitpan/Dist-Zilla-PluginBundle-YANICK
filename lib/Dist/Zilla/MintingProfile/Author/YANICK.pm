@@ -3,7 +3,7 @@ BEGIN {
   $Dist::Zilla::MintingProfile::Author::YANICK::AUTHORITY = 'cpan:YANICK';
 }
 {
-  $Dist::Zilla::MintingProfile::Author::YANICK::VERSION = '0.12.0';
+  $Dist::Zilla::MintingProfile::Author::YANICK::VERSION = '0.13.0';
 }
 # ABSTRACT: create distributions like YANICK
 
@@ -19,6 +19,7 @@ __PACKAGE__->meta->make_immutable;
 1;
 
 __END__
+
 =pod
 
 =head1 NAME
@@ -27,7 +28,7 @@ Dist::Zilla::MintingProfile::Author::YANICK - create distributions like YANICK
 
 =head1 VERSION
 
-version 0.12.0
+version 0.13.0
 
 =head1 AUTHOR
 
@@ -41,4 +42,3 @@ This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-
