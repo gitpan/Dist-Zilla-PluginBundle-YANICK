@@ -3,7 +3,7 @@ BEGIN {
   $Dist::Zilla::PluginBundle::YANICK::AUTHORITY = 'cpan:YANICK';
 }
 {
-  $Dist::Zilla::PluginBundle::YANICK::VERSION = '0.13.0';
+  $Dist::Zilla::PluginBundle::YANICK::VERSION = '0.14.0';
 }
 
 # ABSTRACT: Be like Yanick when you build your dists
@@ -81,7 +81,7 @@ sub configure {
           [ Authority => { 
             ( authority => $arg->{authority} ) x !!$arg->{authority}  
           } ],
-          qw/ ReportVersions
+          qw/ ReportVersions::Tiny
           Signature /,
           [ AutoPrereqs => { 
                   ( skip => $arg->{autoprereqs_skip} ) 
@@ -156,7 +156,7 @@ Dist::Zilla::PluginBundle::YANICK - Be like Yanick when you build your dists
 
 =head1 VERSION
 
-version 0.13.0
+version 0.14.0
 
 =head1 DESCRIPTION
 
@@ -206,7 +206,7 @@ his distributions. It's roughly equivalent to
     [PkgVersion]
     [Authority]
 
-    [ReportVersions]
+    [ReportVersions::Tiny]
     [Signature]
 
     [AutoPrereqs]

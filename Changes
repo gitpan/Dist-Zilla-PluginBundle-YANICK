@@ -1,5 +1,12 @@
 Revision history for Dist-Zilla-PluginBundle-YANICK
 
+0.14.0 2012-12-12
+ [ENHANCEMENTS]
+ - use ReportVersions::Tiny
+
+ [STATISTICS]
+ - code churn: 3 files changed, 13 insertions(+), 4 deletions(-)
+
 0.13.0 2012-11-11
  [ENHANCEMENTS]
  - add CoderwallEndorse
@@ -10,6 +17,9 @@ Revision history for Dist-Zilla-PluginBundle-YANICK
 0.12.0 2012-06-28
  [ENHANCEMENTS]
  - add HelpWanted
+
+ [STATISTICS]
+ - code churn: 3 files changed, 30 insertions(+), 2 deletions(-)
 
 0.11.1 2012-05-28
  [BUG FIXES]

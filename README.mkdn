@@ -4,7 +4,7 @@ Dist::Zilla::PluginBundle::YANICK - Be like Yanick when you build your dists
 
 # VERSION
 
-version 0.13.0
+version 0.14.0
 
 # DESCRIPTION
 
@@ -54,7 +54,7 @@ his distributions. It's roughly equivalent to
     [PkgVersion]
     [Authority]
 
-    [ReportVersions]
+    [ReportVersions::Tiny]
     [Signature]
 
     [AutoPrereqs]

@@ -24,6 +24,11 @@
             "Module::Build" : "0.3601"
          }
       },
+      "develop" : {
+         "requires" : {
+            "version" : "0.9901"
+         }
+      },
       "runtime" : {
          "requires" : {
             "CPAN::Changes" : "0.17",
@@ -69,27 +74,24 @@
       },
       "test" : {
          "requires" : {
-            "Carp" : "0",
             "File::Find" : "0",
             "File::Temp" : "0",
-            "Scalar::Util" : "0",
-            "Test::More" : "0.94",
-            "perl" : "5.004"
+            "Test::More" : "0.88"
          }
       }
    },
    "provides" : {
       "Dist::Zilla::MintingProfile::Author::YANICK" : {
          "file" : "lib/Dist/Zilla/MintingProfile/Author/YANICK.pm",
-         "version" : "v0.13.0"
+         "version" : "v0.14.0"
       },
       "Dist::Zilla::Plugin::Author::YANICK::NextSemanticVersion" : {
          "file" : "lib/Dist/Zilla/Plugin/Author/YANICK/NextSemanticVersion.pm",
-         "version" : "v0.13.0"
+         "version" : "v0.14.0"
       },
       "Dist::Zilla::PluginBundle::YANICK" : {
          "file" : "lib/Dist/Zilla/PluginBundle/YANICK.pm",
-         "version" : "v0.13.0"
+         "version" : "v0.14.0"
       }
    },
    "release_status" : "stable",
@@ -105,7 +107,7 @@
          "web" : "https://github.com/yanick/Dist-Zilla-PluginBundle-YANICK"
       }
    },
-   "version" : "0.13.0",
+   "version" : "0.14.0",
    "x_author_pledge" : {
       "version" : 1
    },
