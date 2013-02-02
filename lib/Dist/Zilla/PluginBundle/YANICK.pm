@@ -3,7 +3,7 @@ BEGIN {
   $Dist::Zilla::PluginBundle::YANICK::AUTHORITY = 'cpan:YANICK';
 }
 {
-  $Dist::Zilla::PluginBundle::YANICK::VERSION = '0.14.0';
+  $Dist::Zilla::PluginBundle::YANICK::VERSION = '0.15.0';
 }
 
 # ABSTRACT: Be like Yanick when you build your dists
@@ -26,7 +26,7 @@ use Dist::Zilla::Plugin::NextRelease;
 use Dist::Zilla::Plugin::MetaProvides::Package;
 use Dist::Zilla::Plugin::InstallRelease;
 use Dist::Zilla::Plugin::InstallGuide 1.200000;
-use Dist::Zilla::Plugin::Twitter 0.016;
+use Dist::Zilla::Plugin::Twitter 0.019;
 use Dist::Zilla::Plugin::Signature;
 use Dist::Zilla::Plugin::Git;
 use Dist::Zilla::Plugin::CoalescePod;
@@ -110,8 +110,14 @@ sub configure {
             [ 'Git::Push' => { push_to    => $upstream } ],
             qw/
                 UploadToCPAN
-                Twitter
             /,
+            [ Twitter => {
+                tweet_url =>
+                    'https://metacpan.org/release/{{$AUTHOR_UC}}/{{$DIST}}-{{$VERSION}}/',
+                tweet => 
+                    'Released {{$DIST}}-{{$VERSION}}{{$TRIAL}} {{$URL}} !META{resources}{repository}{web}',
+                url_shortener => 'none',
+            } ],
             [ 'InstallRelease' => { install_command => 'cpanm .' } ],
         );
     }
@@ -156,7 +162,7 @@ Dist::Zilla::PluginBundle::YANICK - Be like Yanick when you build your dists
 
 =head1 VERSION
 
-version 0.14.0
+version 0.15.0
 
 =head1 DESCRIPTION
 
