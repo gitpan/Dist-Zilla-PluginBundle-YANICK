@@ -17,10 +17,10 @@ my %module_build_args = (
   },
   "dist_abstract" => "Be like Yanick when you build your dists",
   "dist_author" => [
-    "Yanick Champoux <yanick\@babyl.dyndns.org>"
+    "Yanick Champoux <yanick\@cpan.org>"
   ],
   "dist_name" => "Dist-Zilla-PluginBundle-YANICK",
-  "dist_version" => "0.15.0",
+  "dist_version" => "0.16.0",
   "license" => "perl",
   "module_name" => "Dist::Zilla::PluginBundle::YANICK",
   "recommends" => {},
@@ -31,6 +31,8 @@ my %module_build_args = (
     "Dist::Zilla::Plugin::ChangeStats::Git" => 0,
     "Dist::Zilla::Plugin::CoalescePod" => 0,
     "Dist::Zilla::Plugin::CoderwallEndorse" => 0,
+    "Dist::Zilla::Plugin::ContributorsFile" => 0,
+    "Dist::Zilla::Plugin::ContributorsFromGit" => 0,
     "Dist::Zilla::Plugin::Covenant" => 0,
     "Dist::Zilla::Plugin::Git" => 0,
     "Dist::Zilla::Plugin::GithubMeta" => 0,
@@ -68,7 +70,6 @@ my %module_build_args = (
   },
   "script_files" => [],
   "share_dir" => {
-    "dist" => "share",
     "module" => {
       "Dist::Zilla::MintingProfile::Author::YANICK" => "share/profiles"
     }

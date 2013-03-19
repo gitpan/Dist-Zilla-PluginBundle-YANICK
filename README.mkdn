@@ -4,12 +4,15 @@ Dist::Zilla::PluginBundle::YANICK - Be like Yanick when you build your dists
 
 # VERSION
 
-version 0.15.0
+version 0.16.0
 
 # DESCRIPTION
 
 This is the plugin bundle that Yanick uses to release
 his distributions. It's roughly equivalent to
+
+    [ContributorsFromGit]
+    [ContributorsFile]
 
     [Test::Compile]
 
@@ -122,7 +125,7 @@ For `GatherDir`. Defaults to false.
 
 # AUTHOR
 
-Yanick Champoux <yanick@babyl.dyndns.org> [![endorse](http://api.coderwall.com/yanick/endorsecount.png)](http://coderwall.com/yanick)
+Yanick Champoux <yanick@cpan.org> [![endorse](http://api.coderwall.com/yanick/endorsecount.png)](http://coderwall.com/yanick)
 
 # COPYRIGHT AND LICENSE
 

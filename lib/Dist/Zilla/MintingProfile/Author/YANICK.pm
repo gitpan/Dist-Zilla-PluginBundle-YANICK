@@ -3,7 +3,7 @@ BEGIN {
   $Dist::Zilla::MintingProfile::Author::YANICK::AUTHORITY = 'cpan:YANICK';
 }
 {
-  $Dist::Zilla::MintingProfile::Author::YANICK::VERSION = '0.15.0';
+  $Dist::Zilla::MintingProfile::Author::YANICK::VERSION = '0.16.0';
 }
 # ABSTRACT: create distributions like YANICK
 
@@ -28,11 +28,11 @@ Dist::Zilla::MintingProfile::Author::YANICK - create distributions like YANICK
 
 =head1 VERSION
 
-version 0.15.0
+version 0.16.0
 
 =head1 AUTHOR
 
-Yanick Champoux <yanick@babyl.dyndns.org>
+Yanick Champoux <yanick@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 

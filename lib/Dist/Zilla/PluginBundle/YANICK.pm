@@ -3,7 +3,7 @@ BEGIN {
   $Dist::Zilla::PluginBundle::YANICK::AUTHORITY = 'cpan:YANICK';
 }
 {
-  $Dist::Zilla::PluginBundle::YANICK::VERSION = '0.15.0';
+  $Dist::Zilla::PluginBundle::YANICK::VERSION = '0.16.0';
 }
 
 # ABSTRACT: Be like Yanick when you build your dists
@@ -13,6 +13,8 @@ use strict;
 
 use Moose;
 
+use Dist::Zilla::Plugin::ContributorsFile;
+use Dist::Zilla::Plugin::ContributorsFromGit;
 use Dist::Zilla::Plugin::ModuleBuild;
 use Dist::Zilla::Plugin::GithubMeta;
 use Dist::Zilla::Plugin::Homepage;
@@ -55,6 +57,8 @@ sub configure {
 
     $self->add_plugins(
         qw/ 
+            ContributorsFromGit
+            ContributorsFile
             Test::Compile
             CoalescePod
             InstallGuide
@@ -162,12 +166,15 @@ Dist::Zilla::PluginBundle::YANICK - Be like Yanick when you build your dists
 
 =head1 VERSION
 
-version 0.15.0
+version 0.16.0
 
 =head1 DESCRIPTION
 
 This is the plugin bundle that Yanick uses to release
 his distributions. It's roughly equivalent to
+
+    [ContributorsFromGit]
+    [ContributorsFile]
 
     [Test::Compile]
 
@@ -280,7 +287,7 @@ For C<GatherDir>. Defaults to false.
 
 =head1 AUTHOR
 
-Yanick Champoux <yanick@babyl.dyndns.org>
+Yanick Champoux <yanick@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 

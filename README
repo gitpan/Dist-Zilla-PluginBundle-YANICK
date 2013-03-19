@@ -3,11 +3,14 @@ NAME
     dists
 
 VERSION
-    version 0.15.0
+    version 0.16.0
 
 DESCRIPTION
     This is the plugin bundle that Yanick uses to release his distributions.
     It's roughly equivalent to
+
+        [ContributorsFromGit]
+        [ContributorsFile]
 
         [Test::Compile]
 
@@ -110,7 +113,7 @@ DESCRIPTION
     For "GatherDir". Defaults to false.
 
 AUTHOR
-    Yanick Champoux <yanick@babyl.dyndns.org>
+    Yanick Champoux <yanick@cpan.org>
 
 COPYRIGHT AND LICENSE
     This software is copyright (c) 2010 by Yanick Champoux.
