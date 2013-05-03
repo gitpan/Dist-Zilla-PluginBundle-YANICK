@@ -50,7 +50,7 @@ sub pmver {
 
 eval { $v .= pmver('CPAN::Changes','0.17') };
 eval { $v .= pmver('Dist::Zilla::Plugin::Bugtracker','any version') };
-eval { $v .= pmver('Dist::Zilla::Plugin::ChangeStats::Git','v0.2.0') };
+eval { $v .= pmver('Dist::Zilla::Plugin::ChangeStats::Git','v0.2.1') };
 eval { $v .= pmver('Dist::Zilla::Plugin::CoalescePod','any version') };
 eval { $v .= pmver('Dist::Zilla::Plugin::CoderwallEndorse','any version') };
 eval { $v .= pmver('Dist::Zilla::Plugin::ContributorsFile','any version') };
