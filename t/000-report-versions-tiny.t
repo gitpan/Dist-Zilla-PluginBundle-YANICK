@@ -50,7 +50,7 @@ sub pmver {
 
 eval { $v .= pmver('CPAN::Changes','0.17') };
 eval { $v .= pmver('Dist::Zilla::Plugin::Bugtracker','any version') };
-eval { $v .= pmver('Dist::Zilla::Plugin::ChangeStats::Git','any version') };
+eval { $v .= pmver('Dist::Zilla::Plugin::ChangeStats::Git','v0.2.0') };
 eval { $v .= pmver('Dist::Zilla::Plugin::CoalescePod','any version') };
 eval { $v .= pmver('Dist::Zilla::Plugin::CoderwallEndorse','any version') };
 eval { $v .= pmver('Dist::Zilla::Plugin::ContributorsFile','any version') };
@@ -68,6 +68,7 @@ eval { $v .= pmver('Dist::Zilla::Plugin::MetaProvides::Package','any version') }
 eval { $v .= pmver('Dist::Zilla::Plugin::MetaYAML','any version') };
 eval { $v .= pmver('Dist::Zilla::Plugin::ModuleBuild','any version') };
 eval { $v .= pmver('Dist::Zilla::Plugin::NextRelease','any version') };
+eval { $v .= pmver('Dist::Zilla::Plugin::NextVersion::Semantic','v0.1.2') };
 eval { $v .= pmver('Dist::Zilla::Plugin::PodWeaver','any version') };
 eval { $v .= pmver('Dist::Zilla::Plugin::PreviousVersion::Changelog','any version') };
 eval { $v .= pmver('Dist::Zilla::Plugin::ReadmeFromPod','any version') };

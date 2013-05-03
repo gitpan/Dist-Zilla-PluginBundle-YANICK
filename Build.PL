@@ -20,7 +20,7 @@ my %module_build_args = (
     "Yanick Champoux <yanick\@cpan.org>"
   ],
   "dist_name" => "Dist-Zilla-PluginBundle-YANICK",
-  "dist_version" => "0.16.0",
+  "dist_version" => "0.17.0",
   "license" => "perl",
   "module_name" => "Dist::Zilla::PluginBundle::YANICK",
   "recommends" => {},
@@ -28,7 +28,7 @@ my %module_build_args = (
   "requires" => {
     "CPAN::Changes" => "0.17",
     "Dist::Zilla::Plugin::Bugtracker" => 0,
-    "Dist::Zilla::Plugin::ChangeStats::Git" => 0,
+    "Dist::Zilla::Plugin::ChangeStats::Git" => "v0.2.0",
     "Dist::Zilla::Plugin::CoalescePod" => 0,
     "Dist::Zilla::Plugin::CoderwallEndorse" => 0,
     "Dist::Zilla::Plugin::ContributorsFile" => 0,
@@ -46,6 +46,7 @@ my %module_build_args = (
     "Dist::Zilla::Plugin::MetaYAML" => 0,
     "Dist::Zilla::Plugin::ModuleBuild" => 0,
     "Dist::Zilla::Plugin::NextRelease" => 0,
+    "Dist::Zilla::Plugin::NextVersion::Semantic" => "v0.1.2",
     "Dist::Zilla::Plugin::PodWeaver" => 0,
     "Dist::Zilla::Plugin::PreviousVersion::Changelog" => 0,
     "Dist::Zilla::Plugin::ReadmeFromPod" => 0,

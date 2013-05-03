@@ -1,11 +1,18 @@
 Revision history for Dist-Zilla-PluginBundle-YANICK
 
+0.17.0 2013-05-02
+ [ENHANCEMENTS]
+ - Move some plugins around to commit all changes to master after a
+   release.
+ - Up NextVersion::Semantic dependency to v0.1.2
+ - Up ChangeStats::Git dependency
+
+ [STATISTICS]
+ - code churn: 2 files changed, 32 insertions(+), 19 deletions(-)
+
 0.16.0 2013-03-18
  [ENHANCEMENTS]
  - Add DZP::ContributorsFromGit and DZP::ContributorsFile
-
- [STATISTICS]
- - code churn: 5 files changed, 18 insertions(+), 4 deletions(-)
 
 0.15.0 2013-02-02
  [ENHANCEMENTS]
@@ -95,6 +102,7 @@ Revision history for Dist-Zilla-PluginBundle-YANICK
 
 0.2.0 2011-04-10
  [ENHANCEMENTS]
+ - Add FAKE env param.
  - Add the NextSemanticVersion plugin
  - Add ReadmeMarkdownFromPod
  - Add parameter 'fake_release'

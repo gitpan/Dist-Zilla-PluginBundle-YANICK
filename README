@@ -3,7 +3,7 @@ NAME
     dists
 
 VERSION
-    version 0.16.0
+    version 0.17.0
 
 DESCRIPTION
     This is the plugin bundle that Yanick uses to release his distributions.
@@ -67,6 +67,13 @@ DESCRIPTION
         [ConfirmRelease]
 
         [Git::Check]
+
+        [PreviousVersion::Changelog]
+        [NextVersion::Semantic]
+
+        [ChangeStats::Git]
+        group=STATISTICS
+
         [Git::Commit]
         [Git::CommitBuild]
             release_branch = releases
@@ -79,17 +86,12 @@ DESCRIPTION
         [Git::Push]
             push_to = github
 
-        [PreviousVersion::Changelog]
-        [NextVersion::Semantic]
-
         [InstallRelease]
         install_command = cpanm .
 
         [Twitter]
         [SchwartzRatio]
 
-        [ChangeStats::Git]
-        group=STATISTICS
 
         [RunExtraTests]
         [Test::UnusedVars]
@@ -105,6 +107,8 @@ DESCRIPTION
     If given a true value, uses Dist::Zilla::Plugin::FakeRelease instead of
     Dist::Zilla::Plugin::Git::Push, Dist::Zilla::Plugin::UploadToCPAN,
     Dist::Zilla::Plugin::InstallRelease and Dist::Zilla::Plugin::Twitter.
+
+    Can also be triggered via the *FAKE* environment variable.
 
    mb_class
     Passed to "ModuleBuild" plugin.

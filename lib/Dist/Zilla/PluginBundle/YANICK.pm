@@ -3,7 +3,7 @@ BEGIN {
   $Dist::Zilla::PluginBundle::YANICK::AUTHORITY = 'cpan:YANICK';
 }
 {
-  $Dist::Zilla::PluginBundle::YANICK::VERSION = '0.16.0';
+  $Dist::Zilla::PluginBundle::YANICK::VERSION = '0.17.0';
 }
 
 # ABSTRACT: Be like Yanick when you build your dists
@@ -36,11 +36,12 @@ use Dist::Zilla::Plugin::Test::Compile;
 use Dist::Zilla::Plugin::Covenant;
 use Dist::Zilla::Plugin::SchwartzRatio;
 use Dist::Zilla::Plugin::PreviousVersion::Changelog;
-use Dist::Zilla::Plugin::ChangeStats::Git;
+use Dist::Zilla::Plugin::ChangeStats::Git 0.2.0;
 use Dist::Zilla::Plugin::Test::UnusedVars;
 use Dist::Zilla::Plugin::RunExtraTests;
 use Dist::Zilla::Plugin::HelpWanted;
 use Dist::Zilla::Plugin::CoderwallEndorse;
+use Dist::Zilla::Plugin::NextVersion::Semantic 0.1.2;
 
 with 'Dist::Zilla::Role::PluginBundle::Easy';
 
@@ -102,11 +103,18 @@ sub configure {
     );
 
     # Git::Commit can't be before Git::CommitBuild :-/
-    $self->add_plugins(qw/
-        Git::Commit
-    /);
+    $self->add_plugins(
+        'PreviousVersion::Changelog',
+        [ 'NextVersion::Semantic' => {
+            major => 'API CHANGES',
+            minor => 'NEW FEATURES, ENHANCEMENTS',
+            revision => 'BUG FIXES, DOCUMENTATION, STATISTICS',
+        } ],
+        [ 'ChangeStats::Git' => { group => 'STATISTICS' } ],
+        'Git::Commit',
+    );
 
-    if ( $arg->{fake_release} ) {
+    if ( $ENV{FAKE} or $arg->{fake_release} ) {
         $self->add_plugins( 'FakeRelease' );
     }
     else {
@@ -126,17 +134,10 @@ sub configure {
         );
     }
     
-    $self->add_plugins(qw/
-        PreviousVersion::Changelog /,
-        [ 'NextVersion::Semantic' => {
-            major => 'API CHANGES',
-            minor => 'NEW FEATURES, ENHANCEMENTS',
-            revision => 'BUG FIXES, DOCUMENTATION, STATISTICS',
-        } ],
+    $self->add_plugins(
     qw/
         SchwartzRatio 
     /,
-        [ 'ChangeStats::Git' => { group => 'STATISTICS' } ],
         'Test::UnusedVars',
         'RunExtraTests',
     );
@@ -166,7 +167,7 @@ Dist::Zilla::PluginBundle::YANICK - Be like Yanick when you build your dists
 
 =head1 VERSION
 
-version 0.16.0
+version 0.17.0
 
 =head1 DESCRIPTION
 
@@ -231,6 +232,13 @@ his distributions. It's roughly equivalent to
     [ConfirmRelease]
 
     [Git::Check]
+
+    [PreviousVersion::Changelog]
+    [NextVersion::Semantic]
+
+    [ChangeStats::Git]
+    group=STATISTICS
+
     [Git::Commit]
     [Git::CommitBuild]
         release_branch = releases
@@ -243,17 +251,12 @@ his distributions. It's roughly equivalent to
     [Git::Push]
         push_to = github
 
-    [PreviousVersion::Changelog]
-    [NextVersion::Semantic]
-
     [InstallRelease]
     install_command = cpanm .
 
     [Twitter]
     [SchwartzRatio]
 
-    [ChangeStats::Git]
-    group=STATISTICS
 
     [RunExtraTests]
     [Test::UnusedVars]
@@ -276,6 +279,8 @@ L<Dist::Zilla::Plugin::Git::Push>,
 L<Dist::Zilla::Plugin::UploadToCPAN>,
 L<Dist::Zilla::Plugin::InstallRelease> and
 L<Dist::Zilla::Plugin::Twitter>.
+
+Can also be triggered via the I<FAKE> environment variable.
 
 =head3 mb_class
 
