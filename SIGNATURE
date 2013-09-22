@@ -15,31 +15,31 @@ not run its Makefile.PL or Build.PL.
 Hash: SHA1
 
 SHA1 bdf57e7cf3e9063a84d56df3f454f62cee638219 AUTHOR_PLEDGE
-SHA1 63d68ff19f48bf403f1a0f1564114aafd5dd3993 Build.PL
-SHA1 bde6b9efe6e359333b13f26a464a1cf2b6131cf6 Changes
+SHA1 6021b4b2434da3b727433cc44217b96b183c9ad0 Build.PL
+SHA1 23f366c6f14dd8b868b62187b218e26618f5082e Changes
 SHA1 ae49997c3db8cad20a26a913bfe3eacbe33a67e1 INSTALL
 SHA1 96a4607ca40d1b9b1add2be7af82b58850074258 LICENSE
 SHA1 622eff54baa45867c5e64522fdb958680fc61bd6 MANIFEST
-SHA1 d7e2c93127fed6984c3f42dd50da5b8771f5b4df META.json
-SHA1 f7c25203556faaad1bcf1cf544ef74e1da92c3f5 META.yml
-SHA1 d792147f4c0081429ceb2b2b3d2230c12c872816 README
-SHA1 bc2c2958f933b239933c298cd17105bb360a2dbf README.mkdn
-SHA1 4ed2c122c6aa77570716120f1d1936ca383cdaf7 lib/Dist/Zilla/MintingProfile/Author/YANICK.pm
-SHA1 408c080d3591cb27cb3a56e71e0cd11392d69182 lib/Dist/Zilla/Plugin/Author/YANICK/NextSemanticVersion.pm
-SHA1 70a0dd298b722b67704ee647d7e25082b893eaec lib/Dist/Zilla/PluginBundle/YANICK.pm
+SHA1 338295f5b4a36bdbde8bbed63e190619921cee79 META.json
+SHA1 bb237ec10978ab0ab769db55053387336567dba0 META.yml
+SHA1 44645ee9e694a19403804d283dc16318dc35cd23 README
+SHA1 ccd2f30057981961ace085be909518e4cd69debe README.mkdn
+SHA1 f8a1b16f1fa1d7be0dfa979882766e654d3deefc lib/Dist/Zilla/MintingProfile/Author/YANICK.pm
+SHA1 9f2416ef56122a7a8523f91a4997eabcf5ddf53f lib/Dist/Zilla/Plugin/Author/YANICK/NextSemanticVersion.pm
+SHA1 7facdeaa1766726bd53dc51d70d4a438e58b6e5a lib/Dist/Zilla/PluginBundle/YANICK.pm
 SHA1 0b51825e173f2e8c9ffee75e0d734c9705b701e2 share/profiles/default/Module.pm
 SHA1 ef4562036fe1014c7929c0d7a887d7236bd8a088 share/profiles/default/profile.ini
 SHA1 a70ae04ccaab747a11514bc7878f224993314fac share/profiles/default/skel/.gitignore
 SHA1 bf443072d48f2cafe3428b3936b108c95bff1bc6 share/profiles/default/skel/Changes
 SHA1 c8f95def5b8c0cc669a967ac2b0b89998d69a1df share/profiles/default/skel/MANIFEST.SKIP
 SHA1 e423a7053031e1df727b6132f68e2aa15ee08a41 share/profiles/default/skel/dist.ini
-SHA1 3cbe905b92fbc69d59a06031d5ce6c837b352aa2 t/00-compile.t
-SHA1 985d8b3c9721c25e179df43caafb8a3bf5797608 t/000-report-versions-tiny.t
+SHA1 cc23d2bed06249ee685d2fbda23bebc01c7e3e5f t/00-compile.t
+SHA1 3e3bddefe81b12366f77f4f66520331ec9ae9cae t/000-report-versions-tiny.t
 SHA1 ec3f84bfd7a9ce3246e7592f4134100c6b5ce02b xt/release/unused-vars.t
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.11 (GNU/Linux)
 
-iEYEARECAAYFAlGDF6MACgkQ34Hwf+GwC4zQigCfdEBcxp0cER66EHEA+bdR6iqB
-jkkAoJdTrcLZA3u4MA9pbuNlcpd+/XU+
-=bGyV
+iEYEARECAAYFAlI/clIACgkQ34Hwf+GwC4zZoACgpccp0DKknF5WWwFt/vZTUKHF
+S7UAoJEP7MtE0/2CfX/pU5W1rtiOe7wx
+=RS2p
 -----END PGP SIGNATURE-----
