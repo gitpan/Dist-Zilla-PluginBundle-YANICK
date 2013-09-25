@@ -4,7 +4,7 @@ Dist::Zilla::PluginBundle::YANICK - Be like Yanick when you build your dists
 
 # VERSION
 
-version 0.18.2
+version 0.18.3
 
 # DESCRIPTION
 
@@ -79,6 +79,7 @@ his distributions. It's roughly equivalent to
     [Git::Commit]
     [Git::CommitBuild]
         release_branch = releases
+        multiple_inheritance = 1
     [Git::Tag]
         tag_format = v%v
         branch     = releases

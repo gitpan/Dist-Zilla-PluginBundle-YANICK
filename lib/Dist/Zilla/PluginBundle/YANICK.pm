@@ -3,7 +3,7 @@ BEGIN {
   $Dist::Zilla::PluginBundle::YANICK::AUTHORITY = 'cpan:YANICK';
 }
 {
-  $Dist::Zilla::PluginBundle::YANICK::VERSION = '0.18.2';
+  $Dist::Zilla::PluginBundle::YANICK::VERSION = '0.18.3';
 }
 
 # ABSTRACT: Be like Yanick when you build your dists
@@ -98,7 +98,10 @@ sub configure {
           ConfirmRelease
           Git::Check
           /,
-        [ 'Git::CommitBuild' => { release_branch => $release_branch } ],
+        [ 'Git::CommitBuild' => { 
+                release_branch => $release_branch ,
+                multiple_inheritance => 1,
+        } ],
         [ 'Git::Tag'  => { tag_format => 'v%v', branch => $release_branch } ],
     );
 
@@ -167,7 +170,7 @@ Dist::Zilla::PluginBundle::YANICK - Be like Yanick when you build your dists
 
 =head1 VERSION
 
-version 0.18.2
+version 0.18.3
 
 =head1 DESCRIPTION
 
@@ -242,6 +245,7 @@ his distributions. It's roughly equivalent to
     [Git::Commit]
     [Git::CommitBuild]
         release_branch = releases
+        multiple_inheritance = 1
     [Git::Tag]
         tag_format = v%v
         branch     = releases
