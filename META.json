@@ -4,7 +4,7 @@
       "Yanick Champoux <yanick@cpan.org>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 5.012, CPAN::Meta::Converter version 2.120921",
+   "generated_by" : "Dist::Zilla version 5.013, CPAN::Meta::Converter version 2.140640",
    "license" : [
       "perl_5"
    ],
@@ -33,7 +33,6 @@
          "requires" : {
             "CPAN::Changes" : "0.17",
             "Dist::Zilla::Plugin::Authority" : "0",
-            "Dist::Zilla::Plugin::Bugtracker" : "0",
             "Dist::Zilla::Plugin::ChangeStats::Git" : "v0.2.1",
             "Dist::Zilla::Plugin::CheckChangesHasContent" : "0",
             "Dist::Zilla::Plugin::CoalescePod" : "0",
@@ -92,22 +91,21 @@
    "provides" : {
       "Dist::Zilla::MintingProfile::Author::YANICK" : {
          "file" : "lib/Dist/Zilla/MintingProfile/Author/YANICK.pm",
-         "version" : "v0.19.0"
+         "version" : "v0.20.0"
       },
       "Dist::Zilla::Plugin::Author::YANICK::NextSemanticVersion" : {
          "file" : "lib/Dist/Zilla/Plugin/Author/YANICK/NextSemanticVersion.pm",
-         "version" : "v0.19.0"
+         "version" : "v0.20.0"
       },
       "Dist::Zilla::PluginBundle::YANICK" : {
          "file" : "lib/Dist/Zilla/PluginBundle/YANICK.pm",
-         "version" : "v0.19.0"
+         "version" : "v0.20.0"
       }
    },
    "release_status" : "stable",
    "resources" : {
       "bugtracker" : {
-         "mailto" : "bug-dist-zilla-pluginbundle-yanick at rt.cpan.org",
-         "web" : "http://rt.cpan.org/Public/Dist/Display.html?Name=Dist-Zilla-PluginBundle-YANICK"
+         "web" : "https://github.com/yanick/Dist-Zilla-PluginBundle-YANICK/issues"
       },
       "homepage" : "http://search.cpan.org/dist/Dist-Zilla-PluginBundle-YANICK/",
       "repository" : {
@@ -116,7 +114,7 @@
          "web" : "https://github.com/yanick/Dist-Zilla-PluginBundle-YANICK"
       }
    },
-   "version" : "0.19.0",
+   "version" : "0.20.0",
    "x_author_pledge" : {
       "version" : 1
    },

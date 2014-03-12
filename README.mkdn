@@ -4,7 +4,7 @@ Dist::Zilla::PluginBundle::YANICK - Be like Yanick when you build your dists
 
 # VERSION
 
-version 0.19.0
+version 0.20.0
 
 # DESCRIPTION
 
@@ -27,7 +27,6 @@ his distributions. It's roughly equivalent to
     remote=github
 
     [Homepage]
-    [Bugtracker]
 
     [MetaYAML]
     [MetaJSON]
@@ -96,7 +95,6 @@ his distributions. It's roughly equivalent to
     [SchwartzRatio]
 
 
-
     [RunExtraTests]
     [Test::UnusedVars]
 
@@ -108,16 +106,16 @@ Passed as `skip` to AutoPrereqs.
 
 ### authority
 
-Passed to [Dist::Zilla::Plugin::Authority](http://search.cpan.org/perldoc?Dist::Zilla::Plugin::Authority).
+Passed to [Dist::Zilla::Plugin::Authority](https://metacpan.org/pod/Dist::Zilla::Plugin::Authority).
 
 ### fake\_release
 
-If given a true value, uses [Dist::Zilla::Plugin::FakeRelease](http://search.cpan.org/perldoc?Dist::Zilla::Plugin::FakeRelease)
+If given a true value, uses [Dist::Zilla::Plugin::FakeRelease](https://metacpan.org/pod/Dist::Zilla::Plugin::FakeRelease)
 instead of 
-[Dist::Zilla::Plugin::Git::Push](http://search.cpan.org/perldoc?Dist::Zilla::Plugin::Git::Push),
-[Dist::Zilla::Plugin::UploadToCPAN](http://search.cpan.org/perldoc?Dist::Zilla::Plugin::UploadToCPAN),
-[Dist::Zilla::Plugin::InstallRelease](http://search.cpan.org/perldoc?Dist::Zilla::Plugin::InstallRelease) and
-[Dist::Zilla::Plugin::Twitter](http://search.cpan.org/perldoc?Dist::Zilla::Plugin::Twitter).
+[Dist::Zilla::Plugin::Git::Push](https://metacpan.org/pod/Dist::Zilla::Plugin::Git::Push),
+[Dist::Zilla::Plugin::UploadToCPAN](https://metacpan.org/pod/Dist::Zilla::Plugin::UploadToCPAN),
+[Dist::Zilla::Plugin::InstallRelease](https://metacpan.org/pod/Dist::Zilla::Plugin::InstallRelease) and
+[Dist::Zilla::Plugin::Twitter](https://metacpan.org/pod/Dist::Zilla::Plugin::Twitter).
 
 Can also be triggered via the _FAKE_ environment variable.
 

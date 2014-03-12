@@ -3,7 +3,7 @@ BEGIN {
   $Dist::Zilla::Plugin::Author::YANICK::NextSemanticVersion::AUTHORITY = 'cpan:YANICK';
 }
 # ABSTRACT: update the next version, semantic-wise
-$Dist::Zilla::Plugin::Author::YANICK::NextSemanticVersion::VERSION = '0.19.0';
+$Dist::Zilla::Plugin::Author::YANICK::NextSemanticVersion::VERSION = '0.20.0';
 use strict;
 use warnings;
 
@@ -125,13 +125,13 @@ sub inc_version {
 
     $last_version = Perl::Version->new( $last_version );
 
-    for ( @major_groups ) {
-        next unless $_ ~~ @groups;
+    for my $g ( @major_groups ) {
+        next unless grep { $_ eq $g } @groups;
         $last_version->inc_revision;
         return $last_version
     }
-    for ( @minor_groups ) {
-        next unless $_ ~~ @groups;
+    for my $g ( @minor_groups ) {
+        next unless grep { $_ eq $g } @groups;
         $last_version->inc_version;
         return $last_version
     }
@@ -167,13 +167,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Dist::Zilla::Plugin::Author::YANICK::NextSemanticVersion - update the next version, semantic-wise
 
 =head1 VERSION
 
-version 0.19.0
+version 0.20.0
 
 =head1 AUTHOR
 

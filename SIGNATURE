@@ -1,5 +1,5 @@
 This file contains message digests of all files listed in MANIFEST,
-signed via the Module::Signature module, version 0.68.
+signed via the Module::Signature module, version 0.73.
 
 To verify the content in this distribution, first make sure you have
 Module::Signature installed, then type:
@@ -15,18 +15,18 @@ not run its Makefile.PL or Build.PL.
 Hash: SHA1
 
 SHA1 bdf57e7cf3e9063a84d56df3f454f62cee638219 AUTHOR_PLEDGE
-SHA1 fc610109d21848c9876cd1f866f8ee50e8ab0ea1 Build.PL
-SHA1 aa2a207c1519cc5f2a09152803233a15c06d1ea9 Changes
+SHA1 1004ef8321bb77bd6074c15ecba122dcbacb6433 Build.PL
+SHA1 bb3dc572453e199c5fa946015c27da785239b2c1 Changes
 SHA1 ae49997c3db8cad20a26a913bfe3eacbe33a67e1 INSTALL
-SHA1 96a4607ca40d1b9b1add2be7af82b58850074258 LICENSE
+SHA1 a258bb71db8b0eb019433c27d9480dd2cb15ede8 LICENSE
 SHA1 622eff54baa45867c5e64522fdb958680fc61bd6 MANIFEST
-SHA1 b0ad29542ed69fd16493abfe2213fb242fb68597 META.json
-SHA1 3f0f74c3f7efeab4dce5abcb827001fd08f0afbf META.yml
-SHA1 0ff6c0ad5460a1eb484d7277eef2917cf5b826a9 README
-SHA1 833dc8b3f3a97bd409cf6cf7efcbdffc2e1a51bb README.mkdn
-SHA1 a689ce9468879d2d48838bae6be251f1306e76ce lib/Dist/Zilla/MintingProfile/Author/YANICK.pm
-SHA1 fddf003c67ef3f205f82765543edcc91501bd59b lib/Dist/Zilla/Plugin/Author/YANICK/NextSemanticVersion.pm
-SHA1 3ad8bc3c696c70523991e7f5c329e7739b4fb686 lib/Dist/Zilla/PluginBundle/YANICK.pm
+SHA1 763f5766a7dd1e91873d7f911f49539a157d91ab META.json
+SHA1 bf5130ce4974024143ae664b0c0f81a3c585dea7 META.yml
+SHA1 2978bdea350c7f645327cf4fb3cbb52fe511ec52 README
+SHA1 ed965bf8d882d89de1a324d2e5f2181aefe81ce4 README.mkdn
+SHA1 6029316b56d7e9b8cfca40fe4855f93061d94094 lib/Dist/Zilla/MintingProfile/Author/YANICK.pm
+SHA1 3a9fed4c7713b599f4ed093d2b3fa920138f56eb lib/Dist/Zilla/Plugin/Author/YANICK/NextSemanticVersion.pm
+SHA1 7b7bb8ee19b40cac07306324f4e4417db6b1f85d lib/Dist/Zilla/PluginBundle/YANICK.pm
 SHA1 0b51825e173f2e8c9ffee75e0d734c9705b701e2 share/profiles/default/Module.pm
 SHA1 ef4562036fe1014c7929c0d7a887d7236bd8a088 share/profiles/default/profile.ini
 SHA1 a70ae04ccaab747a11514bc7878f224993314fac share/profiles/default/skel/.gitignore
@@ -34,12 +34,12 @@ SHA1 bf443072d48f2cafe3428b3936b108c95bff1bc6 share/profiles/default/skel/Change
 SHA1 c8f95def5b8c0cc669a967ac2b0b89998d69a1df share/profiles/default/skel/MANIFEST.SKIP
 SHA1 e423a7053031e1df727b6132f68e2aa15ee08a41 share/profiles/default/skel/dist.ini
 SHA1 7834528c6457a9b73acd538e1010a5a37f6c9b87 t/00-compile.t
-SHA1 f78bbd11c8e0afae7cb9ee8e035a99881a24ac8f t/000-report-versions-tiny.t
+SHA1 47736803ca4341938d6c41aae7c3ee22f403a12a t/000-report-versions-tiny.t
 SHA1 ec3f84bfd7a9ce3246e7592f4134100c6b5ce02b xt/release/unused-vars.t
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.14 (GNU/Linux)
 
-iEYEARECAAYFAlMCRckACgkQ34Hwf+GwC4yKigCfWttrxgkxQaqK+6OiabrRoFWQ
-nd4AoPbfDD9G3pmX1T8Vhcd6+Bz3vjku
-=bLDJ
+iEYEARECAAYFAlMfrMwACgkQ34Hwf+GwC4wJuwCg6YhYsJgqqpd3HxNaE4ALo9o4
+mpoAnR/1k6QMre4Mm/eGt2td29UbY9/n
+=g4rM
 -----END PGP SIGNATURE-----

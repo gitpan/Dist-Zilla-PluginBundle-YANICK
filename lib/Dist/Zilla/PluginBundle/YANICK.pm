@@ -2,7 +2,7 @@ package Dist::Zilla::PluginBundle::YANICK;
 BEGIN {
   $Dist::Zilla::PluginBundle::YANICK::AUTHORITY = 'cpan:YANICK';
 }
-$Dist::Zilla::PluginBundle::YANICK::VERSION = '0.19.0';
+$Dist::Zilla::PluginBundle::YANICK::VERSION = '0.20.0';
 # ABSTRACT: Be like Yanick when you build your dists
 
 
@@ -32,8 +32,11 @@ sub configure {
             InstallGuide
             Covenant
         /,
-        [ GithubMeta => { remote => $upstream, } ],
-        qw/ Homepage Bugtracker MetaYAML MetaJSON PodWeaver License
+        [ GithubMeta => { 
+            remote => $upstream, 
+            issues => 1,
+        } ],
+        qw/ Homepage MetaYAML MetaJSON PodWeaver License
           ReadmeFromPod 
           ReadmeMarkdownFromPod
           /,
@@ -135,13 +138,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Dist::Zilla::PluginBundle::YANICK - Be like Yanick when you build your dists
 
 =head1 VERSION
 
-version 0.19.0
+version 0.20.0
 
 =head1 DESCRIPTION
 
@@ -164,7 +169,6 @@ his distributions. It's roughly equivalent to
     remote=github
 
     [Homepage]
-    [Bugtracker]
 
     [MetaYAML]
     [MetaJSON]
