@@ -2,15 +2,31 @@ package Dist::Zilla::PluginBundle::YANICK;
 BEGIN {
   $Dist::Zilla::PluginBundle::YANICK::AUTHORITY = 'cpan:YANICK';
 }
-$Dist::Zilla::PluginBundle::YANICK::VERSION = '0.20.0';
+$Dist::Zilla::PluginBundle::YANICK::VERSION = '0.21.0';
 # ABSTRACT: Be like Yanick when you build your dists
+
+# [TODO] add CONTRIBUTING file
 
 
 use strict;
 
 use Moose;
 
-with 'Dist::Zilla::Role::PluginBundle::Easy';
+with qw/
+    Dist::Zilla::Role::PluginBundle::Easy
+    Dist::Zilla::Role::PluginBundle::Config::Slicer
+/;
+
+has "doap_changelog" => (
+    isa => 'Bool',
+    is => 'ro',
+    lazy => 1,
+    default => sub {
+        my $self = shift;
+
+        $self->payload->{doap_changelog} //= 1;
+    },
+);
 
 sub configure {
     my ( $self ) = @_;
@@ -48,7 +64,7 @@ sub configure {
         'MetaProvides::Package',
         qw/ MatchManifest
           ManifestSkip /,
-        [ GatherDir => {
+        [ 'Git::GatherDir' => {
                 include_dotfiles => $arg->{include_dotfiles},
               } ],
         qw/ ExecDir
@@ -127,6 +143,14 @@ sub configure {
         ]);
     }
 
+    $self->add_plugins( 
+        [ DOAP => { 
+            process_changes => $self->doap_changelog,
+#            ttl_filename => 'project.ttl',
+        } ],
+        [ 'CPANFile' ],
+    );
+
     $self->config_slice( 'mb_class' );
 
     return;
@@ -146,7 +170,7 @@ Dist::Zilla::PluginBundle::YANICK - Be like Yanick when you build your dists
 
 =head1 VERSION
 
-version 0.20.0
+version 0.21.0
 
 =head1 DESCRIPTION
 
@@ -192,7 +216,7 @@ his distributions. It's roughly equivalent to
     [MatchManifest]
     [ManifestSkip]
 
-    [GatherDir]
+    [Git::GatherDir]
     [ExecDir]
 
     [PkgVersion]
@@ -240,6 +264,11 @@ his distributions. It's roughly equivalent to
     [RunExtraTests]
     [Test::UnusedVars]
 
+    [DOAP]
+    process_changes = 1
+
+    [CPANFile]
+
 =head2 ARGUMENTS
 
 =head3 autoprereqs_skip
@@ -267,11 +296,16 @@ Passed to C<ModuleBuild> plugin.
 
 =head3 include_dotfiles
 
-For C<GatherDir>. Defaults to false.
+For C<Git::GatherDir>. Defaults to false.
 
 =head3 tweet
 
 If a tweet should be sent. Defaults to C<true>.
+
+=head3 doap_changelog
+
+If the DOAP plugin should generate the project history
+off the changelog. Defaults to I<true>.
 
 =head1 AUTHOR
 

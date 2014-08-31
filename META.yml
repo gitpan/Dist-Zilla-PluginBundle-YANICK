@@ -12,7 +12,7 @@ build_requires:
 configure_requires:
   Module::Build: '0.3601'
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 5.013, CPAN::Meta::Converter version 2.140640'
+generated_by: 'Dist::Zilla version 5.020, CPAN::Meta::Converter version 2.140640'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -21,16 +21,17 @@ name: Dist-Zilla-PluginBundle-YANICK
 provides:
   Dist::Zilla::MintingProfile::Author::YANICK:
     file: lib/Dist/Zilla/MintingProfile/Author/YANICK.pm
-    version: v0.20.0
+    version: v0.21.0
   Dist::Zilla::Plugin::Author::YANICK::NextSemanticVersion:
     file: lib/Dist/Zilla/Plugin/Author/YANICK/NextSemanticVersion.pm
-    version: v0.20.0
+    version: v0.21.0
   Dist::Zilla::PluginBundle::YANICK:
     file: lib/Dist/Zilla/PluginBundle/YANICK.pm
-    version: v0.20.0
+    version: v0.21.0
 requires:
   CPAN::Changes: '0.17'
   Dist::Zilla::Plugin::Authority: '0'
+  Dist::Zilla::Plugin::CPANFile: '0'
   Dist::Zilla::Plugin::ChangeStats::Git: v0.2.1
   Dist::Zilla::Plugin::CheckChangesHasContent: '0'
   Dist::Zilla::Plugin::CoalescePod: '0'
@@ -38,6 +39,7 @@ requires:
   Dist::Zilla::Plugin::ContributorsFile: '0'
   Dist::Zilla::Plugin::ContributorsFromGit: '0'
   Dist::Zilla::Plugin::Covenant: '0'
+  Dist::Zilla::Plugin::DOAP: '0'
   Dist::Zilla::Plugin::Git: '0'
   Dist::Zilla::Plugin::GithubMeta: '0'
   Dist::Zilla::Plugin::HelpWanted: '0'
@@ -66,6 +68,7 @@ requires:
   Dist::Zilla::Role::AfterRelease: '0'
   Dist::Zilla::Role::FileMunger: '0'
   Dist::Zilla::Role::MintingProfile::ShareDir: '0'
+  Dist::Zilla::Role::PluginBundle::Config::Slicer: '0'
   Dist::Zilla::Role::PluginBundle::Easy: '0'
   Dist::Zilla::Role::TextTemplate: '0'
   Dist::Zilla::Role::VersionProvider: '0'
@@ -78,7 +81,7 @@ resources:
   bugtracker: https://github.com/yanick/Dist-Zilla-PluginBundle-YANICK/issues
   homepage: http://search.cpan.org/dist/Dist-Zilla-PluginBundle-YANICK/
   repository: https://github.com/yanick/Dist-Zilla-PluginBundle-YANICK.git
-version: 0.20.0
+version: 0.21.0
 x_author_pledge:
   version: 1
 x_authority: cpan:YANICK

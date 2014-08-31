@@ -3,7 +3,7 @@ NAME
     dists
 
 VERSION
-    version 0.20.0
+    version 0.21.0
 
 DESCRIPTION
     This is the plugin bundle that Yanick uses to release his distributions.
@@ -48,7 +48,7 @@ DESCRIPTION
         [MatchManifest]
         [ManifestSkip]
 
-        [GatherDir]
+        [Git::GatherDir]
         [ExecDir]
 
         [PkgVersion]
@@ -96,6 +96,11 @@ DESCRIPTION
         [RunExtraTests]
         [Test::UnusedVars]
 
+        [DOAP]
+        process_changes = 1
+
+        [CPANFile]
+
   ARGUMENTS
    autoprereqs_skip
     Passed as "skip" to AutoPrereqs.
@@ -114,10 +119,14 @@ DESCRIPTION
     Passed to "ModuleBuild" plugin.
 
    include_dotfiles
-    For "GatherDir". Defaults to false.
+    For "Git::GatherDir". Defaults to false.
 
    tweet
     If a tweet should be sent. Defaults to "true".
+
+   doap_changelog
+    If the DOAP plugin should generate the project history off the
+    changelog. Defaults to *true*.
 
 AUTHOR
     Yanick Champoux <yanick@cpan.org>

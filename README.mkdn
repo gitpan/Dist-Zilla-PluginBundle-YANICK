@@ -4,7 +4,7 @@ Dist::Zilla::PluginBundle::YANICK - Be like Yanick when you build your dists
 
 # VERSION
 
-version 0.20.0
+version 0.21.0
 
 # DESCRIPTION
 
@@ -50,7 +50,7 @@ his distributions. It's roughly equivalent to
     [MatchManifest]
     [ManifestSkip]
 
-    [GatherDir]
+    [Git::GatherDir]
     [ExecDir]
 
     [PkgVersion]
@@ -98,6 +98,11 @@ his distributions. It's roughly equivalent to
     [RunExtraTests]
     [Test::UnusedVars]
 
+    [DOAP]
+    process_changes = 1
+
+    [CPANFile]
+
 ## ARGUMENTS
 
 ### autoprereqs\_skip
@@ -125,11 +130,16 @@ Passed to `ModuleBuild` plugin.
 
 ### include\_dotfiles
 
-For `GatherDir`. Defaults to false.
+For `Git::GatherDir`. Defaults to false.
 
 ### tweet
 
 If a tweet should be sent. Defaults to `true`.
+
+### doap\_changelog
+
+If the DOAP plugin should generate the project history
+off the changelog. Defaults to _true_.
 
 # AUTHOR
 

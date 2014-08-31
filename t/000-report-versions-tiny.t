@@ -50,6 +50,7 @@ sub pmver {
 
 eval { $v .= pmver('CPAN::Changes','0.17') };
 eval { $v .= pmver('Dist::Zilla::Plugin::Authority','any version') };
+eval { $v .= pmver('Dist::Zilla::Plugin::CPANFile','any version') };
 eval { $v .= pmver('Dist::Zilla::Plugin::ChangeStats::Git','v0.2.1') };
 eval { $v .= pmver('Dist::Zilla::Plugin::CheckChangesHasContent','any version') };
 eval { $v .= pmver('Dist::Zilla::Plugin::CoalescePod','any version') };
@@ -57,6 +58,7 @@ eval { $v .= pmver('Dist::Zilla::Plugin::CoderwallEndorse','any version') };
 eval { $v .= pmver('Dist::Zilla::Plugin::ContributorsFile','any version') };
 eval { $v .= pmver('Dist::Zilla::Plugin::ContributorsFromGit','any version') };
 eval { $v .= pmver('Dist::Zilla::Plugin::Covenant','any version') };
+eval { $v .= pmver('Dist::Zilla::Plugin::DOAP','any version') };
 eval { $v .= pmver('Dist::Zilla::Plugin::Git','any version') };
 eval { $v .= pmver('Dist::Zilla::Plugin::GithubMeta','any version') };
 eval { $v .= pmver('Dist::Zilla::Plugin::HelpWanted','any version') };
@@ -85,6 +87,7 @@ eval { $v .= pmver('Dist::Zilla::Plugin::Twitter','0.025') };
 eval { $v .= pmver('Dist::Zilla::Role::AfterRelease','any version') };
 eval { $v .= pmver('Dist::Zilla::Role::FileMunger','any version') };
 eval { $v .= pmver('Dist::Zilla::Role::MintingProfile::ShareDir','any version') };
+eval { $v .= pmver('Dist::Zilla::Role::PluginBundle::Config::Slicer','any version') };
 eval { $v .= pmver('Dist::Zilla::Role::PluginBundle::Easy','any version') };
 eval { $v .= pmver('Dist::Zilla::Role::TextTemplate','any version') };
 eval { $v .= pmver('Dist::Zilla::Role::VersionProvider','any version') };
