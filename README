@@ -3,7 +3,7 @@ NAME
     dists
 
 VERSION
-    version 0.21.0
+    version 0.21.1
 
 DESCRIPTION
     This is the plugin bundle that Yanick uses to release his distributions.
@@ -23,8 +23,6 @@ DESCRIPTION
 
         [GithubMeta]
         remote=github
-
-        [Homepage]
 
         [MetaYAML]
         [MetaJSON]

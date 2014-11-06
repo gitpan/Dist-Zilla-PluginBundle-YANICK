@@ -62,7 +62,6 @@ eval { $v .= pmver('Dist::Zilla::Plugin::DOAP','any version') };
 eval { $v .= pmver('Dist::Zilla::Plugin::Git','any version') };
 eval { $v .= pmver('Dist::Zilla::Plugin::GithubMeta','any version') };
 eval { $v .= pmver('Dist::Zilla::Plugin::HelpWanted','any version') };
-eval { $v .= pmver('Dist::Zilla::Plugin::Homepage','any version') };
 eval { $v .= pmver('Dist::Zilla::Plugin::InstallGuide','1.200000') };
 eval { $v .= pmver('Dist::Zilla::Plugin::InstallRelease','any version') };
 eval { $v .= pmver('Dist::Zilla::Plugin::License','any version') };

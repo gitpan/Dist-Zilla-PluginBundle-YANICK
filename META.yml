@@ -12,7 +12,7 @@ build_requires:
 configure_requires:
   Module::Build: '0.3601'
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 5.020, CPAN::Meta::Converter version 2.140640'
+generated_by: 'Dist::Zilla version 5.023, CPAN::Meta::Converter version 2.142690'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -21,13 +21,13 @@ name: Dist-Zilla-PluginBundle-YANICK
 provides:
   Dist::Zilla::MintingProfile::Author::YANICK:
     file: lib/Dist/Zilla/MintingProfile/Author/YANICK.pm
-    version: v0.21.0
+    version: v0.21.1
   Dist::Zilla::Plugin::Author::YANICK::NextSemanticVersion:
     file: lib/Dist/Zilla/Plugin/Author/YANICK/NextSemanticVersion.pm
-    version: v0.21.0
+    version: v0.21.1
   Dist::Zilla::PluginBundle::YANICK:
     file: lib/Dist/Zilla/PluginBundle/YANICK.pm
-    version: v0.21.0
+    version: v0.21.1
 requires:
   CPAN::Changes: '0.17'
   Dist::Zilla::Plugin::Authority: '0'
@@ -43,7 +43,6 @@ requires:
   Dist::Zilla::Plugin::Git: '0'
   Dist::Zilla::Plugin::GithubMeta: '0'
   Dist::Zilla::Plugin::HelpWanted: '0'
-  Dist::Zilla::Plugin::Homepage: '0'
   Dist::Zilla::Plugin::InstallGuide: '1.200000'
   Dist::Zilla::Plugin::InstallRelease: '0'
   Dist::Zilla::Plugin::License: '0'
@@ -79,9 +78,9 @@ requires:
   warnings: '0'
 resources:
   bugtracker: https://github.com/yanick/Dist-Zilla-PluginBundle-YANICK/issues
-  homepage: http://search.cpan.org/dist/Dist-Zilla-PluginBundle-YANICK/
+  homepage: https://github.com/yanick/Dist-Zilla-PluginBundle-YANICK
   repository: https://github.com/yanick/Dist-Zilla-PluginBundle-YANICK.git
-version: 0.21.0
+version: 0.21.1
 x_author_pledge:
   version: 1
 x_authority: cpan:YANICK

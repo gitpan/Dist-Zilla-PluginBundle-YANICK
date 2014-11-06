@@ -2,7 +2,7 @@ package Dist::Zilla::PluginBundle::YANICK;
 BEGIN {
   $Dist::Zilla::PluginBundle::YANICK::AUTHORITY = 'cpan:YANICK';
 }
-$Dist::Zilla::PluginBundle::YANICK::VERSION = '0.21.0';
+$Dist::Zilla::PluginBundle::YANICK::VERSION = '0.21.1';
 # ABSTRACT: Be like Yanick when you build your dists
 
 # [TODO] add CONTRIBUTING file
@@ -52,7 +52,7 @@ sub configure {
             remote => $upstream, 
             issues => 1,
         } ],
-        qw/ Homepage MetaYAML MetaJSON PodWeaver License
+        qw/ MetaYAML MetaJSON PodWeaver License
           ReadmeFromPod 
           ReadmeMarkdownFromPod
           /,
@@ -170,7 +170,7 @@ Dist::Zilla::PluginBundle::YANICK - Be like Yanick when you build your dists
 
 =head1 VERSION
 
-version 0.21.0
+version 0.21.1
 
 =head1 DESCRIPTION
 
@@ -191,8 +191,6 @@ his distributions. It's roughly equivalent to
 
     [GithubMeta]
     remote=github
-
-    [Homepage]
 
     [MetaYAML]
     [MetaJSON]

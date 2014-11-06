@@ -12,7 +12,6 @@ requires "Dist::Zilla::Plugin::DOAP" => "0";
 requires "Dist::Zilla::Plugin::Git" => "0";
 requires "Dist::Zilla::Plugin::GithubMeta" => "0";
 requires "Dist::Zilla::Plugin::HelpWanted" => "0";
-requires "Dist::Zilla::Plugin::Homepage" => "0";
 requires "Dist::Zilla::Plugin::InstallGuide" => "1.200000";
 requires "Dist::Zilla::Plugin::InstallRelease" => "0";
 requires "Dist::Zilla::Plugin::License" => "0";
